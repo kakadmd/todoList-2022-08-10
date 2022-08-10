@@ -36,29 +36,13 @@ function renderTodolistDonelist() {
     //添加内容到 正在进行
     if (item.done) {
       donelist.insertAdjacentHTML(
-        "afterbegin",
-        "<li><input type='checkbox' id=" +
-          i +
-          " checked=" +
-          item.done +
-          "><p>" +
-          item.title +
-          "</p><a href='javascript:;' id=" +
-          i +
-          "></a></li>"
+        "afterbegin",`<li><input type='checkbox' id=${i} checked=${item.done}><p>${item.title}</p><a href='javascript:;' id=${i}></a></li>`
       );
       done++;
     } else {
       // 添加内容到已经完成
       todolist.insertAdjacentHTML(
-        "afterbegin",
-        "<li><input type='checkbox' id=" +
-          i +
-          "><p>" +
-          item.title +
-          "</p><a href='javascript:;' id=" +
-          i +
-          "></a></li>"
+        "afterbegin",`<li><input type='checkbox' id=${i}><p>${item.title}</p><a href='javascript:;' id=${i}></a></li>`
       );
       todo++;
     }
