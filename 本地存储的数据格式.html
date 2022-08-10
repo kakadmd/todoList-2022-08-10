@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <script src="js/jquery.min.js"></script> -->
+</head>
+
+<body>
+    <script>
+        // 数据格式 var todolist = [{title: "xxx", done: false}]
+        // 
+        // JSON.parse()
+
+        // {title: "xxx", done:false}
+        var todolist = [{
+            title: '我今天吃八个馒头',
+            done: false
+        }, {
+            title: '我今天学习jq',
+            done: false
+        }, ];
+        localStorage.setItem('todolist', JSON.stringify(todolist))
+        var str = localStorage.getItem('todolist')
+        var arr = JSON.parse(str);
+        console.log(arr[0].title);
+
+        // console.log(JSON.parse(str));
+        // 1. 本地存储里面只能存储字符串的数据格式 把我们的数组对象转换为字符串格式 JSON.stringify()
+        // 2. 获取本地存储的数据 我们需要把里面的字符串数据转换为 对象格式 JSON.parse()
+
+        // localStorage 在本列中的作用
+    </script>
+</body>
+
+</html>
